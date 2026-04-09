@@ -67,11 +67,26 @@
   .hero {
     background: var(--dark);
     padding: 80px 40px 100px;
-    text-align: center;
   }
   .hero-inner {
-    max-width: 800px;
+    max-width: 1100px;
     margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+  }
+  .hero-text {
+    flex: 1;
+    text-align: left;
+  }
+  .hero-image {
+    flex: 0 0 400px;
+    max-width: 400px;
+  }
+  .hero-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
   }
   .hero-badge {
     display: inline-block;
@@ -107,7 +122,6 @@
   .hero-price {
     display: flex;
     align-items: center;
-    justify-content: center;
     gap: 16px;
     margin-bottom: 32px;
   }
@@ -504,6 +518,10 @@
   /* ── RESPONSIVE ── */
   @media (max-width: 900px) {
     .hero { padding: 60px 24px 80px; }
+    .hero-inner { flex-direction: column; text-align: center; }
+    .hero-text { text-align: center; }
+    .hero-image { flex: 0 0 auto; max-width: 300px; margin: 0 auto; }
+    .hero-price { justify-content: center; }
     .hero h1 { font-size: 34px; }
     .hero-price .amount { font-size: 36px; }
     .problem-grid { grid-template-columns: 1fr; }
@@ -537,15 +555,20 @@
 <!-- HERO -->
 <div class="hero">
   <div class="hero-inner">
-    <div class="hero-badge">Trusted by 25,000+ Businesses</div>
-    <h1>Turn Any TV Into a <em>Digital Sign</em> in Minutes</h1>
-    <p>OptiStick plugs into your TV's HDMI port and lets you display promotions, menus, schedules, dashboards, and more. Control everything from your phone or computer, from anywhere.</p>
-    <div class="hero-price">
-      <div class="amount">$89.99</div>
-      <div class="note">One-time purchase<br>No subscription required</div>
+    <div class="hero-text">
+      <div class="hero-badge">Trusted by 25,000+ Businesses</div>
+      <h1>Turn Any TV Into a <em>Digital Sign</em> in Minutes</h1>
+      <p>OptiStick plugs into your TV's HDMI port and lets you display promotions, menus, schedules, dashboards, and more. Control everything from your phone or computer, from anywhere.</p>
+      <div class="hero-price">
+        <div class="amount">$89.99</div>
+        <div class="note">One-time purchase<br>No subscription required</div>
+      </div>
+      <a href="https://shop.optisigns.com/cart/47284891189416:1" class="hero-cta">Buy OptiStick Now</a>
+      <div class="hero-sub">Free shipping &bull; Free plan included &bull; 160+ app integrations</div>
     </div>
-    <a href="https://shop.optisigns.com/cart/47284891189416:1" class="hero-cta">Buy OptiStick Now</a>
-    <div class="hero-sub">Free shipping &bull; Free plan included &bull; 160+ app integrations</div>
+    <div class="hero-image">
+      <img src="images/optistick.png" alt="OptiStick Digital Signage Player" width="1200" height="1200">
+    </div>
   </div>
 </div>
 
